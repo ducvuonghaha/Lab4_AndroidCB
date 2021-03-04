@@ -1,0 +1,29 @@
+package com.dcvg.lab4_androidcb;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class DetailUserActivity extends AppCompatActivity {
+
+    private TextView tvFullnameUserDetail;
+    private TextView tvPhoneUserDetail;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_detail_user);
+        initView();
+
+        Intent intent = getIntent();
+        tvFullnameUserDetail.setText(intent.getStringExtra("fullname_user"));
+        tvPhoneUserDetail.setText(intent.getStringExtra("phone_user"));
+    }
+
+    private void initView() {
+        tvFullnameUserDetail = (TextView) findViewById(R.id.tvFullnameUserDetail);
+        tvPhoneUserDetail = (TextView) findViewById(R.id.tvPhoneUserDetail);
+    }
+}
