@@ -1,16 +1,16 @@
-package com.dcvg.lab4_androidcb;
+package com.dcvg.lab4_androidcb.activity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.dcvg.lab4_androidcb.R;
 import com.dcvg.lab4_androidcb.adapter.UserAdapter;
 import com.dcvg.lab4_androidcb.dao.UserDAO;
 import com.dcvg.lab4_androidcb.model.User;

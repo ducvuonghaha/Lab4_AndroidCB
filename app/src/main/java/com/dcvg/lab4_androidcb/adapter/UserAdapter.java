@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.dcvg.lab4_androidcb.DetailUserActivity;
+import com.dcvg.lab4_androidcb.activity.DetailUserActivity;
 import com.dcvg.lab4_androidcb.R;
 import com.dcvg.lab4_androidcb.model.User;
 
@@ -38,6 +38,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.Holder> {
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
         holder.user = userList.get(position);
+        holder.tvUser.setText(String.valueOf(holder.user.getId()));
         holder.tvFullnameUser.setText(holder.user.getFullname());
         holder.tvPhoneUser.setText(holder.user.getPhone());
 
